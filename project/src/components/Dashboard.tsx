@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, MessageSquare, TrendingUp, Target, Calendar, Star } from 'lucide-react';
+import { Users, MessageSquare, TrendingUp, Star } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
 import { mockAnalytics, mockContacts, mockCampaigns } from '../data/mockData';
 

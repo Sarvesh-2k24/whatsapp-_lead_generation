@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Settings, Smartphone, MessageSquare, Shield, Bell, Database, Key, Zap } from 'lucide-react';
+import { Smartphone, Shield, Bell, Database, Zap } from 'lucide-react';
 
 export const SettingsView: React.FC = () => {
   const [activeTab, setActiveTab] = useState('whatsapp');

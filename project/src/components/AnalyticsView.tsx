@@ -3,10 +3,18 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import { TrendingUp, Users, MessageSquare, Star, Download, Calendar } from 'lucide-react';
 import { mockAnalytics, mockContacts, mockCampaigns } from '../data/mockData';
 
+type ConversionDataPoint = {
+  date: string;
+  contacts: number;
+  conversations: number;
+  qualified: number;
+  conversionRate: number;
+};
+
 export const AnalyticsView: React.FC = () => {
   const conversionData = mockAnalytics.dailyMetrics.map(day => ({
     ...day,
-    conversionRate: ((day.qualified / day.contacts) * 100).toFixed(1)
+    conversionRate: parseFloat(((day.qualified / day.contacts) * 100).toFixed(1))
   }));
 
   const statusDistribution = [
@@ -119,11 +127,11 @@ export const AnalyticsView: React.FC = () => {
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Conversion Rate Trend</h3>
           <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={conversionData}>
+            <BarChart data={conversionData as ConversionDataPoint[]}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="date" />
               <YAxis />
-              <Tooltip formatter={(value) => [`${value}%`, 'Conversion Rate']} />
+              <Tooltip formatter={(value: number) => [`${value}%`, 'Conversion Rate']} />
               <Bar dataKey="conversionRate" fill="#8B5CF6" />
             </BarChart>
           </ResponsiveContainer>

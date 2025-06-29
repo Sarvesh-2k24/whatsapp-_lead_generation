@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Filter, Plus, Download, Tag, Phone, Mail, Building, Calendar, Star } from 'lucide-react';
+import { Search, Filter, Plus, Download, Phone, Mail, Building, Calendar, Star } from 'lucide-react';
 import { mockContacts } from '../data/mockData';
 import { Contact } from '../types';
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Target, Plus, Play, Pause, BarChart3, Users, MessageSquare, TrendingUp } from 'lucide-react';
+import { Target, Plus, Play, Pause, Users, MessageSquare, TrendingUp } from 'lucide-react';
 import { mockCampaigns } from '../data/mockData';
 import { Campaign } from '../types';
 

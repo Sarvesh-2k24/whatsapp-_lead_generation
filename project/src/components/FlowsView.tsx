@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Bot, Plus, Play, Pause, Edit, Copy, Trash2, ArrowRight, MessageSquare, HelpCircle, Zap } from 'lucide-react';
+import { Bot, Plus, Play, Pause, Edit, Copy, ArrowRight, MessageSquare, HelpCircle, Zap } from 'lucide-react';
 import { mockFlows } from '../data/mockData';
 import { ConversationFlow } from '../types';
 

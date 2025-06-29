@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { MessageSquare, Search, Filter, Clock, User, Bot, Send } from 'lucide-react';
-import { mockContacts, mockConversations, mockMessages } from '../data/mockData';
+import { MessageSquare, Search, Clock, User, Bot, Send } from 'lucide-react';
+import { mockContacts, mockConversations } from '../data/mockData';
 import { format } from 'date-fns';
 
 export const ConversationsView: React.FC = () => {
